@@ -1,0 +1,14 @@
+itemTitle: Recursion
+itemFilename: Recursion.hs
+itemDescription:
+  Haskell does not provide any built-in syntax for expressing
+  loop structures. Instead, iteration is achieved via recursion.
+itemDependencies:
+  - BasicSyntax
+  - BasicTypes
+  - BasicData
+  - Functions
+  - Sectioning
+itemIntroductions:
+  - Recursion
+  - HigherOrderFunctions

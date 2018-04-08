@@ -36,6 +36,7 @@ data HaskellFeature
   | MutableState
   | Currying
   | Lambda
+  | HigherOrderFunctions
   deriving (Eq, Ord, Enum, Bounded, Show, Generic)
 
 instance FromJSON HaskellFeature
