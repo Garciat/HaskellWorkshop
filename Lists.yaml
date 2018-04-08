@@ -1,0 +1,22 @@
+itemTitle: List Processing
+itemFilename: Lists.hs
+itemDescription: 
+  Lists are a fundamental data type in Haskell.
+  They represent a **possibly infinite** sequence
+  of values **of the same type**.
+
+
+  Lists are so generally ubiquous that Haskell
+  provides dedicated syntax sugar to define them
+  as well as a readily-available suite of standard
+  functions to work with them.
+
+
+  Haskell lists are not lazy, _per se_.
+  Haskell is lazy and lists tag along for the ride.
+  Although lists may be used as on-demand streams,
+  remember that lists may be consumed multiple times.
+itemDependencies: []
+itemIntroductions:
+  - BasicSyntax
+  - Lazyness

@@ -1,0 +1,20 @@
+itemTitle: Strings
+itemFilename: Strings.hs
+itemDescription:
+  Surprise! Strings are just lists of `Char`!
+  This means that all the syntax and functions
+  you''ve learned for manipulating lists is
+  directly usable with Haskell''s strings.
+
+
+  Many functions for working with strings
+  (and not general lists) are also available
+  globally. Moreover, the `Data.Char` module
+  provides functions to manipulate characters.
+itemDependencies:
+  - Lazyness
+itemIntroductions:
+  - BasicData
+  - Operators
+  - Functions
+  - StringsAsLists

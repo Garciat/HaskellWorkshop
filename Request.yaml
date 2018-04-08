@@ -1,0 +1,11 @@
+itemTitle: HTTP Requests
+itemFilename: Request.hs
+itemDescription:
+  TODO
+itemDependencies:
+  - DoSyntax
+  - BasicTypes
+  - BasicSyntax
+  - Main
+itemIntroductions:
+  - GeneralProgramming

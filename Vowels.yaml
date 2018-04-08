@@ -1,0 +1,11 @@
+itemTitle: ! 'Problem: Vowels'
+itemFilename: Vowels.hs
+itemDescription:
+  TODO
+itemDependencies:
+  - BasicData
+  - BasicTypes
+  - TypeClasses
+  - Sectioning
+itemIntroductions:
+  - Abstraction

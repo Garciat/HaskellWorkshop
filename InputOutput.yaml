@@ -1,0 +1,9 @@
+itemTitle: Input/Output
+itemFilename: InputOutput.hs
+itemDescription:
+  TODO
+itemDependencies:
+  - StringsAsLists
+itemIntroductions:
+  - DoSyntax
+  - Main

@@ -1,0 +1,23 @@
+itemTitle: Simple Data Types
+itemFilename: SimpleData.hs
+itemDescription:
+  Defining data types in Haskell is very easy.
+  The syntax for both definition and usage is
+  simple and intuitive.
+
+
+  Unlike OO languages, values in Haskell are
+  fully opaque in the sense that it is not
+  possible to ''peek'' inside of them in any
+  general way. For example, all **Java** objects
+  have a `toString` method, and all **Python**
+  objects may have their attributes inspected
+  with the standard `dir` function.
+
+
+  The way information (and computation!) is derived
+  from Haskell values is via **pattern matching**.
+itemIntroductions:
+  - BasicData
+  - PatternMatching
+itemDependencies: []

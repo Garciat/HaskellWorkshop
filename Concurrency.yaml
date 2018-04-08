@@ -1,0 +1,8 @@
+itemTitle: Concurrency & Parallelism
+itemFilename: Concurrency.hs
+itemDescription:
+  Haskell has green threads.
+itemDependencies:
+  - DoSyntax
+itemIntroductions:
+  - GeneralProgramming

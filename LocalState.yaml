@@ -1,0 +1,33 @@
+itemTitle: Local State
+itemFilename: LocalState.hs
+itemDescription:
+  Haskell can actually represent mutable state.
+  The safest form of mutable state is _local
+  mutable state_.
+  This type of mutable state is safe because
+  Haskell''s type system makes sure that its mutable
+  variables cannot escape and be used in a different
+  context.
+  Thus, running this computation is actually **pure**!
+
+
+  Note, however, that this is *not* a common
+  programming style in Haskell. Local mutable state
+  is usually implemented when an imperative algorithm
+  is preferred either for performance, stylistic,
+  or other reasons.
+
+
+  There are other forms of mutable state that can
+  be shared between multiple threads of execution,
+  although at a cost of safety (due to race conditions)
+  or performance (due to _some_ form of synchronization).
+  Shared mutable state is rightfully frowned-upon.
+  Consider using _communication_ instead.
+itemDependencies:
+  - DoSyntax
+  - Purity
+  - BasicTypes
+  - BasicSyntax
+itemIntroductions:
+  - MutableState

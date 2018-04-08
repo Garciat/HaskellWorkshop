@@ -1,0 +1,11 @@
+itemTitle: Call C
+itemFilename: CallC.hs
+itemDescription:
+  Shows that Haskell can trivially call C.
+  This matters because *speed*.
+itemDependencies:
+  - BasicTypes
+  - BasicSyntax
+  - Main
+itemIntroductions:
+  - LanguageExtensions

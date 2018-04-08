@@ -1,0 +1,10 @@
+itemTitle: REST Server
+itemFilename: Server.hs
+itemDescription:
+  TODO
+itemDependencies:
+  - AdvancedTypes
+  - Libraries
+  - TypeClasses
+itemIntroductions:
+  - GeneralProgramming

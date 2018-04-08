@@ -1,0 +1,8 @@
+itemTitle: Database Access
+itemFilename: Database.hs
+itemDescription:
+  Haskell can access DBs just like any other language.
+itemDependencies:
+  - DoSyntax
+itemIntroductions:
+  - GeneralProgramming

@@ -1,0 +1,12 @@
+itemTitle: Unit Testing
+itemFilename: Unit.hs
+itemDescription:
+  TODO
+itemDependencies:
+  - Main
+  - DoSyntax
+  - BasicTypes
+  - PartialFunctions
+itemIntroductions:
+  - PropertyTesting
+  - Libraries
