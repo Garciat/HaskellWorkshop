@@ -35,6 +35,7 @@ data HaskellFeature
   | StringsAsLists
   | MutableState
   | Currying
+  | Lambda
   deriving (Eq, Ord, Enum, Bounded, Show, Generic)
 
 instance FromJSON HaskellFeature

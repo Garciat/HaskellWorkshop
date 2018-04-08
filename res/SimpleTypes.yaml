@@ -1,0 +1,35 @@
+itemTitle: Types
+itemFilename: SimpleTypes.hs
+itemDescription: 
+  Writing full Haskell programs without _any_ mention of types
+  is completely possible and a reasonably common practice.
+  Does this mean that Haskell is dynamically typed?
+  Not at all! Haskell is in fact both **statically-** and (very)
+  **strongly-**typed. That means that every expression in a
+  program has a _type determined at compile-time_, and also that
+  the compiler is very keen on enforcing type rules.
+
+
+  Why, then, is it possible to write Haskell code without
+  declaring types _ad nauseam_ as it is done in Java or C++?
+  Because of type inference! This language feature is actually
+  commonplace nowadays. Java 10 and C++11 have type inference,
+  albeit a very limited form of it. A C++ variable can be declared
+  with the `auto` keyword to avoid declaring its type manually,
+  while letting the compiler infer it from the variable's
+  initializer expression. For example, `auto age = 25;`.
+  Similarly, in Java with `var age = 25;`.
+
+
+  Haskell's type inference is one the most powerful to be
+  encountered. Not only is it capable dispensing of lots of typing,
+  but also it will analyze the entire function's body and
+  infer the _most general type_ for it!
+itemDependencies:
+  - BasicSyntax
+  - Functions
+  - Lambda
+itemIntroductions:
+  - BasicTypes
+  - Sectioning
+  - Currying

@@ -20,3 +20,4 @@ itemDependencies: []
 itemIntroductions:
   - BasicSyntax
   - Lazyness
+  - Lambda
