@@ -109,7 +109,7 @@ renderPresentation :: String -> ByteString
 renderPresentation doc =
   renderHtml $ H.docTypeHtml $ do
     H.head $ do
-      H.style "body { max-width: 800px; margin: 40px auto; }"
+      H.style "body { max-width: 800px; margin: 40px auto; } p { text-align: justify; }"
       H.link
         H.! A.rel "stylesheet"
         H.! A.href "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css"
