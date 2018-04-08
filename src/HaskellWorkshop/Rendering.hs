@@ -109,6 +109,7 @@ renderPresentation :: String -> ByteString
 renderPresentation doc =
   renderHtml $ H.docTypeHtml $ do
     H.head $ do
+      H.meta H.! A.charset "UTF-8"
       H.title "Haskell Workshop"
       H.style "body { max-width: 800px; margin: 40px auto; } p { text-align: justify; }"
       H.link
