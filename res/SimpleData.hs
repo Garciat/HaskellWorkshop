@@ -22,3 +22,14 @@ altColorName altColor =
     Dark color -> "Dark " ++ colorName color
     Light color -> "Light " ++ colorName color
     Normal color -> colorName color
+
+
+-- can also be written like:
+colorName' Red = "Red"
+colorName' Blue = "Blue"
+colorName' Yellow = "Yellow"
+
+altColorName' (Light Red) = "Pink"
+altColorName' (Dark color) = "Dark " ++ colorName' color
+altColorName' (Light color) = "Light " ++ colorName' color
+altColorName' (Normal color) = colorName' color
