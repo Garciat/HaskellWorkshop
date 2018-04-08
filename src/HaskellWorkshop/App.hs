@@ -2,19 +2,21 @@
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
 
+module HaskellWorkshop.App where
+
 import Prelude hiding (unlines)
 import Data.Char
 import Data.Graph (stronglyConnComp, flattenSCCs)
 import Data.List ((\\), intercalate, nub, sort)
 import Data.Maybe (fromJust)
 import GHC.Generics
+import System.FilePath ((</>))
 import System.Directory
 
 import Data.Text.Lazy (pack)
 import Data.Yaml
 import Network.Wai
 import Network.HTTP.Types
-import Network.Wai.Handler.Warp (run)
 import Text.Blaze.Html.Renderer.Utf8 (renderHtml)
 import Text.Markdown
 import Text.Regex.Posix
@@ -110,8 +112,8 @@ linkedItemTitle item =
   where
     title = itemTitle item
 
-prettyItem item = do
-  fileContents <- readFile (itemFilename item)
+prettyItem dirPath item = do
+  fileContents <- readFile (dirPath </> itemFilename item)
   return $ unlines $
     [ anchoredItemTitle item
     , "---"
@@ -138,10 +140,10 @@ prettyItem item = do
 
 ---
 
-allItems :: IO [Item]
-allItems = do
-  paths <- listDirectory "."
-  let yamlFiles = filter (=~ pattern) paths
+allItems :: FilePath -> IO [Item]
+allItems dirPath = do
+  paths <- listDirectory dirPath
+  let yamlFiles = map (dirPath </>) . filter (=~ pattern) $ paths
   mapM readItemFromFile yamlFiles
   where
     pattern = "\\.yaml$" :: String
@@ -167,9 +169,9 @@ presentationOrder items =
         local = itemIntroductions item
         outwards = itemDependencies item
 
-presentationDocument = do
-  items <- presentationOrder <$> allItems
-  articles <- mapM prettyItem items
+presentationDocument dirPath = do
+  items <- presentationOrder <$> allItems dirPath
+  articles <- mapM (prettyItem dirPath) items
   return $
     "Haskell Workshop @<img height=\"30px\" src=\"https://www.underconsideration.com/brandnew/archives/eventbrite_logo.png\">"
     ++ "\n===\n\n\n"
@@ -187,9 +189,8 @@ featuresNotIntroduced items =
 
 ---
 
-renderPresentation = do
-  doc <- presentationDocument
-  return $ renderHtml $ H.docTypeHtml $ do
+renderPresentation doc =
+  renderHtml $ H.docTypeHtml $ do
     H.head $ do
       H.style "body { max-width: 800px; margin: 40px auto; }"
       H.link
@@ -207,15 +208,11 @@ renderPresentation = do
       markdown defaultMarkdownSettings (pack doc)
 
 app _ respond = do
-  docHtml <- renderPresentation
+  docHtml <- renderPresentation <$> presentationDocument "res"
   respond $
     responseLBS
       status200
       [("Content-Type", "text/html")]
       docHtml
-
-main = do
-  putStrLn $ "http://localhost:8080/"
-  run 8080 app
 
 ---
