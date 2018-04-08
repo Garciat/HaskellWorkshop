@@ -1,8 +1,20 @@
-itemTitle: Call C
+itemTitle: Calling C
 itemFilename: CallC.hs
 itemDescription:
-  Shows that Haskell can trivially call C.
-  This matters because *speed*.
+  Haskell compiles to native code and is very fast, but the truth
+  of the matter is that C and C++ are the best choices for writing
+  high-performance code.
+  For this reason, essentially all languages provide a **C Foreign
+  Function Interface** (FFI) that allows them to invoke C code with very
+  little effort (sometimes). Haskell is no exception, and it does
+  so quite seamlessly and efficiently.
+
+  
+  The Haskell Programming Language's syntax and semantics are
+  described in high detail in a standard specification. The latest
+  standard is **Haskell 2010**. The language's design and standard
+  allow for **language extensions** as an evolution path for
+  the language. The C FFI presented is one of these extensions.
 itemDependencies:
   - BasicTypes
   - BasicSyntax

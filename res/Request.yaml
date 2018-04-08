@@ -1,7 +1,7 @@
 itemTitle: HTTP Requests
 itemFilename: Request.hs
 itemDescription:
-  TODO
+  Making HTTP requests from Haskell is simple enough.
 itemDependencies:
   - DoSyntax
   - BasicTypes

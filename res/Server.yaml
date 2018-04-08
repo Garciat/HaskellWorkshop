@@ -1,10 +1,18 @@
 itemTitle: REST Server
 itemFilename: Server.hs
 itemDescription:
-  TODO
+  It is possible to write REST-style web API servers in Haskell.
+
+
+  The code example makes of the `Servant` web API framework.
+  It allows the programmer to describe the API as a _type_.
+  This, coupled with advance type-level programming techniques,
+  results in a type-safe API server implementation.
 itemDependencies:
   - AdvancedTypes
   - Libraries
   - TypeClasses
+  - LanguageExtensions
+  - Main
 itemIntroductions:
   - GeneralProgramming

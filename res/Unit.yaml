@@ -1,7 +1,25 @@
 itemTitle: Unit Testing
 itemFilename: Unit.hs
 itemDescription:
-  TODO
+  Types are a very powerful tool to describe interfaces and to
+  make _invalid program states unrepresentable_.
+  Nonetheless, their usage is still an engineering trade-off
+  between complexity and safety (among others).
+  The practice of software testing remains a valuable tool in
+  a functional programmer's arsenal.
+
+
+  Testing is not built into the language, but plenty of testing
+  frameworks exist that make use of the language's flexibility
+  to make it look and feel as if it were. In particular, the
+  library `HSpec` borrows from Ruby's literate-style testing
+  framework `RSpec`.
+
+
+  Haskell is also the proud father of QuickCheck, a framework for
+  property-based testing. This style of testing consists of
+  _describing properties_ of an algorithm and letting the framework
+  test the property with systematically-generated random test cases.
 itemDependencies:
   - Main
   - DoSyntax

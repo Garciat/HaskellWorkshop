@@ -1,7 +1,12 @@
 itemTitle: Input/Output
 itemFilename: InputOutput.hs
 itemDescription:
-  TODO
+  Haskell is, in fact, a fantastic imperative language.
+  It is possible to write entire programs in an imperative style
+  without any pushback from the language.
+  At times, problems may even demand this style. 
+  Haskell provides a comprehensive set of tools to tackle these
+  problems just like in any other imperative-only language.
 itemDependencies:
   - StringsAsLists
 itemIntroductions:

@@ -2,6 +2,13 @@ itemTitle: Database Access
 itemFilename: Database.hs
 itemDescription:
   Haskell can access DBs just like any other language.
+
+
+  The DB access library used in this example is purposefully low-level.
+  Other libraries exist that resemble ORMs in the sense that they
+  efficiently and intuitively map the language's syntax and types to SQL.
+  These usually use advanced type-level programming techniques, so their
+  introduction is delayed.
 itemDependencies:
   - DoSyntax
 itemIntroductions:
