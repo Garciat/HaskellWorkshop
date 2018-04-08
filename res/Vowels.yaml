@@ -1,7 +1,9 @@
 itemTitle: ! 'Problem: Vowels'
 itemFilename: Vowels.hs
 itemDescription:
-  TODO
+  The following code tackles the algorithmic problem of
+  counting the number of times each individual occurs
+  in a piece of text.
 itemDependencies:
   - BasicData
   - BasicTypes
