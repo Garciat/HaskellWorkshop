@@ -37,6 +37,7 @@ data HaskellFeature
   | Currying
   | Lambda
   | HigherOrderFunctions
+  | Monads
   deriving (Eq, Ord, Enum, Bounded, Show, Generic)
 
 instance FromJSON HaskellFeature
