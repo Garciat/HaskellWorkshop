@@ -1,0 +1,28 @@
+itemTitle: Type Classes
+itemFilename: TypeClasses.hs
+itemDescription:
+  Type classes are one of the main language features for defining
+  abstractions in Haskell. Despite their name, they are _not at all_
+  related to OO classes.
+
+
+  The role of a type class is to define a set of constraints in
+  the form of one or more functions that a type must be compatible
+  with. For example, the class of Number types must be compatible
+  with addition, product, and division. If a type provides those
+  functions, then it _belongs_ to the Number type class. In other
+  words, the type is an _instance_ (an occurrence) of the types
+  belonging to the class.
+
+
+  Equality (`==`), arithmetic (`+`, `-`, etc.), and comparision (`<`)
+  are one of the many sets of operations that are defined in terms
+  of type classes in Haskell.
+itemDependencies:
+  - BasicData
+  - BasicTypes
+  - PatternMatching
+  - Functions
+  - DoSyntax
+itemIntroductions:
+  - TypeClasses
